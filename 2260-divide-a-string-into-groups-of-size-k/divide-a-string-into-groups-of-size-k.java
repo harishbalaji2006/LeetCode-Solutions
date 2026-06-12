@@ -6,12 +6,15 @@ class Solution {
             s+=fill;
             mod++;
         }
-        String[] arr = new String[s.length()/k];
-        System.out.println(s);
+        //System.out.println(s);
         for(int i=0;i<s.length();i+=k){
             String str = s.substring(i,i+k);
             li.add(str);
         }
-        return li.toArray(new String[0]);
+        String[] arr = new String[li.size()];
+        for(int i=0;i<li.size();i++){
+            arr[i] = li.get(i);
+        }
+        return arr;
     }
 }
