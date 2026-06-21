@@ -6,7 +6,7 @@ class Solution {
         for(int i=0;i<costs.length;i++){
             sum+=costs[i];
             if(sum <= coins) c++;
-            if(sum > coins) break;
+            else break;
         }
         return c;
     }
