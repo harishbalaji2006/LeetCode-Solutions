@@ -22,7 +22,6 @@ class Solution {
             sb.append(f);
         }
         String str = sb.toString();
-        //System.out.print(str);
         String r = reverse(str);
         if(str.equals(r)) return true;
         return false;
