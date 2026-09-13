@@ -2,7 +2,7 @@ class Solution {
     public int countSpecialIntegers(int[] nums) {
         HashMap<Integer, ArrayList<Integer>> hm = new HashMap<>();
         for(int i = 0; i < nums.length; i++) {
-            hm.putIfAbsent(nums[i], new ArrayList<>());
+            if(!hm.containsKey(nums[i])) hm.put(nums[i], new ArrayList<>());
             hm.get(nums[i]).add(i);
         }
         int c = 0;
